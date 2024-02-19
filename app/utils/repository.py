@@ -4,18 +4,7 @@ from sqlalchemy import delete, insert, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 
-class AbstractRepository(ABC):
-    ...
-    # @abstractmethod
-    # async def add_one(self):
-    #     raise NotImplementedError
-    #
-    # @abstractmethod
-    # async def find_all(self):
-    #     raise NotImplementedError
-
-
-class SQLAlchemyRepository(AbstractRepository):
+class SQLAlchemyRepository:
     model = None
 
     def __init__(self, session: AsyncSession):
