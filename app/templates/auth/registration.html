@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chat rooms </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+<section class="container forms">
+    <div class="form">
+
+        <div class="form-content">
+            <header>Зарегистрироваться</header>
+
+            <form method="post" action="/registration" id="registrationForm">
+
+                <div class="field input-field">
+                    <input type="text" placeholder="Имя" class="input" id="first_name" name="first_name">
+                </div>
+
+                <div class="field input-field">
+                    <input type="text" placeholder="Фамилия" class="input" id="last_name" name="last_name">
+                </div>
+
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" id="email" name="email">
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" placeholder="Пароль" class="password" id="password1" name="password1">
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" placeholder="Подтвердите пароль" class="password" id="password2"
+                           name="password2">
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+
+                <div class="field button-field">
+                    <button type="submit">Зарегистрироваться</button>
+                </div>
+            </form>
+
+            <div class="form-link">
+                <span>У вас уже есть аккаунт? <a href="{{ url_for('user_login_template') }}" class="link login-link">Войти</a></span>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="media-options">
+            <a href="{{ url_for('login_user_yandex') }}" class="field yandex">
+                <img src="{{ url_for('static', path='images/yandex_logo.png') }}" alt="" class="yandex-img">
+                <span>Войти с помощью Яндекс</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script src="{{ url_for('static', path='js/script.js') }}"></script>
+
+
+</body>
+</html>

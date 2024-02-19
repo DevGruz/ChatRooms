@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chat rooms </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+<section class="container forms">
+    <div class="form">
+
+        <div class="form-content">
+            <header>Войти</header>
+
+            <form method="post" action="/login" id="loginForm">
+
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" name="email">
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" placeholder="Пароль" class="password" name="password">
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+
+                <div class="form-link">
+                    <a href="#" class="forgot-pass">Забыли пароль?</a>
+                </div>
+
+                <div class="field button-field">
+                    <button type="submit">Войти</button>
+                </div>
+            </form>
+
+            <div class="form-link">
+                <span>У вас нет учетной записи? <a href="{{ url_for('user_registration_template') }}"
+                                                   class="link signup-link">Зарегистрироваться</a></span>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="media-options">
+            <a href="{{ url_for('login_user_yandex' }}" class="field yandex">
+                <img src="{{ url_for('static', path='images/yandex_logo.png') }}" alt="" class="yandex-img">
+                <span>Войти с помощью Яндекс</span>
+            </a>
+        </div>
+
+    </div>
+
+
+
+</section>
+
+<!-- JavaScript -->
+<script src="{{ url_for('static', path='js/script.js') }}"></script>
+
+
+</body>
+</html>
