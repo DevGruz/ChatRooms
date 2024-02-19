@@ -20,6 +20,16 @@ git clone https://github.com/your_username/ChatRooms.git
 ```sh
 cd chat-rooms/
 ```
+Создайте файл .env в корне проекта и укажите в нем необходимые переменные окружения:
+```sh
+SECRET_KEY=your_secret_key
+
+POSTGRES__HOST=db
+POSTGRES__PORT=5432
+POSTGRES__USER=postgres
+POSTGRES__PASSWORD=postgres
+POSTGRES__NAME=chat_rooms
+```
 Запустите проект с помощью Docker Compose:
 ```sh
 docker-compose up --build
