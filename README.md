@@ -14,7 +14,7 @@
 Убедитесь, что у вас установлен Docker и Docker Compose.
 Клонируйте репозиторий:
 ```sh
-git clone https://github.com/your_username/your_project.git
+git clone https://github.com/your_username/ChatRooms.git
 ```
 Перейдите в директорию проекта:
 ```sh
