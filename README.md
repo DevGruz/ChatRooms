@@ -18,7 +18,7 @@ git clone https://github.com/your_username/your_project.git
 ```
 Перейдите в директорию проекта:
 ```sh
-cd your_project
+cd chat-rooms/
 ```
 Запустите проект с помощью Docker Compose:
 ```sh
